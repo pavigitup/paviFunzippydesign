@@ -633,6 +633,11 @@ color:white;
     width: 100vw;
     height: 100vh;
     align-self: center;
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+    justify-content: center;
+    align-items: center;
 }
 .end-content{
     font-size: 24px;
@@ -641,9 +646,8 @@ color:white;
      width:80%;
     font-weight: 400;
     font-style: normal;
-    position: relative;
-    top: 32px;
-    left: 47px;
+    
+    
     
     text-align: center;
     color: #813E92;
@@ -656,9 +660,8 @@ color:white;
     list-style-type: none;
     width: 425px;
     height: 42px;
-     position: relative;
-    top: 80px;
-    left: 93px;
+    margin:10px;
+    
     align-self: center;
 
 }
