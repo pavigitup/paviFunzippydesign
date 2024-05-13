@@ -1,22 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Suez+One&family=Tangerine:wght@400;700&display=swap');
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .app-container {
   display: flex;
-  min-width: 100vw;
+  width: 100%;
   min-height: 100vh;
   flex-direction: column;
 }
-.heading {
-  color: white;
-  font-size:30px;
-}
 .nav-container {
   display: flex;
+  justify-content: center;
   width: 100%;
-  height: 20vh;
   background-image: linear-gradient(90deg, #7674c9 0%, #d8aaf3 100%);
-}
-.image {
-  height: 200px;
-  width: 100px;
+  background-size: cover;
 }
 .nav {
   display: flex;
@@ -25,46 +31,63 @@
   align-items: center;
   flex-direction: row;
 }
-.navbar {
-  display: flex;
+.heading {
+  color: white;
+  font-size:96px;
+  width: 40%;
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.image{
+  width: 10%;
+  position: relative;
+}
+
+.img-rotate{
+  position: relative;
+  top: 0px;
+  right: 0px;
+  transform: rotate(180deg);
+}
+
+
 .list-container {
   display: flex;
-  justify-content: space-around;
-  width:50%;
   height: 16px;
-  top: 73px;
-  left: 345px;
+  width: 50%;
   list-style-type: none;
-  gap: 0px;
-  opacity: 0px;
+  justify-content: space-between;
 }
 .item {
-  font-family: Playfair Display;
-  font-size: 12px;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
   font-weight: 400;
   line-height: 16px;
   color: #881616;
-  margin-left: 50px;
-}
-@media screen and (min-width:768px){
-  .item{
-    font-size:18px;
-  }
-  .heading{
-    font-size:30px;
 
-  }
 }
 
-.home-container {
+@media (max-width:641px){
+ .item{
+    font-size: 9px;
+ }
+ .heading{
+  font-size: 44px;
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+ }
+}
+
+
+/* SECTION - 2 */
+
+/* .home-container {
   background: #b1affd;
-  height: 90%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
   text-align: center;
-  flex-direction: column;
+  width: 100%;
 }
 .tittle {
   color: #572424;
@@ -75,28 +98,39 @@
   text-align: center;
   align-items: center;
 }
-.name-container {
-  box-shadow: 50px 50px 0px 0px #ac12c6ab;
-  background: #d9d9d9;
-  width: 90%;
-  height: 90%;
+
+
+.frame-container {
+  background-image: url("https://res.cloudinary.com/dtm38igx6/image/upload/v1715532860/Rectangle_2_fmzd98.png");
+    background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 60%;
+  top: 50px;
+
+}
+
+.inner-con{
+  background-image: url("https://res.cloudinary.com/dtm38igx6/image/upload/v1715532848/3-removebg-preview_1_x0nzk0.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  left: 10%;
   display: flex;
   justify-content: center;
-  align-self: center;
-}
-.frame-container {
-  background-image: url("https://s3-alpha-sig.figma.com/img/06db/7b5e/e71197ab0719490332086bbba69db0fb?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aU89HFfvbSfZ3Np9jXIZMhTnWTyntpDIcp7kaG0BeiY5-f-0wd1ez0uFo1wH2Vxhr~C9TwKfOr10VrdR~f3Z08OGclwpQZ5jgFwyAIEz7hmGG~cNFiZ2uE2s9m-6-bmF-iNPoSfnLbAfmoyJQr-nHRDGb9DyWioSPse7VEqIVIXh~FYityommQFNqMrZ3NZxsNlSBivZSlV3IJKYb0YCbkIoPaLNhfakPK3SHMkYAgiUAp-AgkHhg0v5OHmT5DPoGOfSi-t92wCu7X3vFeT15cHiV4GPt-GVU0OVtI6yqyH42KmslXlhZ2zeEjxMAIah8eKk5GjDp3FuKtF01YpQCA__");
-  width: 500px;
-  height: 500px;
-  background-size: cover;
+  align-items: center;
+  
+ 
 }
 .dride-name {
   font-family: Tangerine;
   font-size: 40px;
   font-weight: 400;
   line-height: 40px;
-  height: 20px;
-  width: 40px;
+  width: 80px;
   text-align: center;
   color: #881616;
   align-self: center;
@@ -106,11 +140,15 @@
 .circle {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 100%;
   align-self: flex-end;
   align-items: center;
   display: flex;
+  position: relative;
+
+
 }
+
 .circle-green {
   background: linear-gradient(
     90deg,
@@ -120,6 +158,9 @@
   box-shadow: -5px -5px 4px 0px #170d51;
 
   position: relative;
+  top: -20px;
+  left: 68%;
+
 }
 .circle-red {
   background: linear-gradient(
@@ -128,16 +169,23 @@
     rgba(129, 62, 146, 0.85) 71.66%
   );
   box-shadow: -5px -5px 4px 0px #170d51;
-  right: 60%;
-  position: absolute;
+  right: 50%;
+  position: relative;
+  
 }
 .name {
-  font-family: Suez One;
-  font-size: 20px;
+  font-family: "Suez One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
   font-weight: 400;
   line-height: 26.12px;
   text-align: center;
   color: #f4f3fb;
+  width: 900px;
+  position: relative;
+  left: 50px;
+  align-self: center;
 }
 .section-3 {
   background: #b1affd;
@@ -147,7 +195,6 @@
   height: 100vh;
   display: flex;
   margin: 0px;
-
   opacity: 0px;
   border: 1px solid #b1affd;
 }
@@ -182,8 +229,8 @@
   color: #9d2828;
   height: 90%;
   width: 70%;
-}
-.section-3ellipse {
+} */
+/* .section-3ellipse {
   background-image: linear-gradient(to bottom, #7D69F8, #D44963);
   width: 400px;
   height: 400px;
@@ -194,10 +241,10 @@
 
 }
 .image-5 {
-width:1000px;
+width:1000px; */
 
 
-}
+/* }
 .section-3ellipse2 {
   background-image: linear-gradient(to bottom, #7D69F8, #D44963);
   width: 350px;
@@ -209,10 +256,10 @@ width:1000px;
   background-size: cover;
 
 
-}
+} */
 
 
-.ellipse3 {
+/* .ellipse3 {
   background-image: linear-gradient(to bottom, #7D69F8, #D44963);
   width: 300px;
   height: 300px;
@@ -240,9 +287,9 @@ width:1000px;
 .ellipse3{
   width: 250px;
   height: 250px;
-}
+} */
 
-}
+
 
 .image-container {
   width: 550px;
@@ -290,7 +337,7 @@ width:1000px;
   
 
 }
-.section-4 {
+/*.section-4 {
   width: 100vw;
   height: 120vh;
   background: linear-gradient(180deg, #b1affd 0%, #676274 100%);
@@ -668,4 +715,4 @@ color:white;
 .footer li{
     color: #881616;
 }
-
+ */
